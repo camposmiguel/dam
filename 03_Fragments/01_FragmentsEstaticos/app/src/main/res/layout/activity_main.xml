@@ -6,7 +6,6 @@
     android:orientation="horizontal"
     tools:context="com.miguelcr.fragmentsestaticos.MainActivity">
 
-
     <fragment
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
