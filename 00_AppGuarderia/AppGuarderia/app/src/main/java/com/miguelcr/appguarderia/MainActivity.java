@@ -84,14 +84,12 @@ public class MainActivity extends AppCompatActivity
 
         Fragment f = null;
 
-        if (id == R.id.nav_camera) {
-            f = new DesayunoFragment();
-        } else if (id == R.id.nav_gallery) {
-            f = new DesayunoFragment();
-        } else if (id == R.id.nav_slideshow) {
-            f = new DesayunoFragment();
-        } else if (id == R.id.nav_manage) {
-            f = new DesayunoFragment();
+        if (id == R.id.nav_alumnos) {
+            f = new AlumnosFragment();
+        } else if (id == R.id.nav_obs_casa) {
+            f = new ObservacionesFragment();
+        } else if (id == R.id.nav_avisos) {
+            f = new AvisosFragment();
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
