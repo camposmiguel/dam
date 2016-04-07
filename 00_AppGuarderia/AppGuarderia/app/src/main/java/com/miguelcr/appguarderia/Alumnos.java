@@ -5,13 +5,19 @@ package com.miguelcr.appguarderia;
  */
 public class Alumnos {
     private String nombre;
-    private int depositadoManana, depositadoTarde, comidaManana, comidaTarde;
-    private boolean siestaManana, siestaTarde;
+    private int depositadoManana, depositadoTarde, comidaManana, comidaTarde, siestaManana, siestaTarde;
 
     public Alumnos() {
+        this.nombre = "";
+        this.depositadoManana = 0;
+        this.depositadoTarde = 0;
+        this.comidaManana = 0;
+        this.comidaTarde = 0;
+        this.siestaManana = 0;
+        this.siestaTarde = 0;
     }
 
-    public Alumnos(String nombre, int depositadoManana, int depositadoTarde, int comidaManana, int comidaTarde, boolean siestaManana, boolean siestaTarde) {
+    public Alumnos(String nombre, int depositadoManana, int depositadoTarde, int comidaManana, int comidaTarde, int siestaManana, int siestaTarde) {
         this.nombre = nombre;
         this.depositadoManana = depositadoManana;
         this.depositadoTarde = depositadoTarde;
@@ -61,19 +67,19 @@ public class Alumnos {
         this.comidaTarde = comidaTarde;
     }
 
-    public boolean isSiestaManana() {
+    public int getSiestaManana() {
         return siestaManana;
     }
 
-    public void setSiestaManana(boolean siestaManana) {
+    public void setSiestaManana(int siestaManana) {
         this.siestaManana = siestaManana;
     }
 
-    public boolean isSiestaTarde() {
+    public int getSiestaTarde() {
         return siestaTarde;
     }
 
-    public void setSiestaTarde(boolean siestaTarde) {
+    public void setSiestaTarde(int siestaTarde) {
         this.siestaTarde = siestaTarde;
     }
 }

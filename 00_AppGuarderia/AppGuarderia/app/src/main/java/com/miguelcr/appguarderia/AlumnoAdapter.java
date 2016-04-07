@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -43,15 +44,30 @@ public class AlumnoAdapter extends ArrayAdapter<Alumnos> {
         // Cambio los valores de los componentes visuales con la información del alumno actual
         nombreAlumno.setText(alumnoActual.getNombre());
 
-        /*
-        switch (alumnoActual.getComidaManana()) {
-            case AlumnosFragment.COME_BIEN: imagenComida.setImageResource(); break;
-            case AlumnosFragment.COME_REGULAR: imagenComida.setImageResource(); break;
-        }
-        */
-
         imagenComida.setImageLevel(alumnoActual.getComidaManana());
+        imagenSiesta.setImageLevel(alumnoActual.getSiestaManana());
+        imagenDeposicion.setImageLevel(alumnoActual.getDepositadoManana());
 
+        imagenComida.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(context, "Comida", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        imagenSiesta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(context,"Siesta",Toast.LENGTH_LONG).show();
+            }
+        });
+
+        imagenDeposicion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(context,"Deposición",Toast.LENGTH_LONG).show();
+            }
+        });
 
         return v;
 
