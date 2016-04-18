@@ -24,6 +24,11 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        // Cargar el fragmento de Alumnos por defecto
+        getSupportFragmentManager().beginTransaction()
+                .add(R.id.container, new AlumnosFragment())
+                .commit();
+
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {

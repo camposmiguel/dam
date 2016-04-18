@@ -34,12 +34,12 @@ public class AlumnoAdapter extends ArrayAdapter<Alumnos> {
 
         // Recatamos los elementos de la vista
         TextView nombreAlumno = (TextView)v.findViewById(R.id.textViewNombreAlumno);
-        ImageView imagenComida = (ImageView)v.findViewById(R.id.imageViewComida);
-        ImageView imagenSiesta = (ImageView)v.findViewById(R.id.imageViewSiesta);
-        ImageView imagenDeposicion = (ImageView)v.findViewById(R.id.imageViewDeposicion);
+        final ImageView imagenComida = (ImageView)v.findViewById(R.id.imageViewComida);
+        final ImageView imagenSiesta = (ImageView)v.findViewById(R.id.imageViewSiesta);
+        final ImageView imagenDeposicion = (ImageView)v.findViewById(R.id.imageViewDeposicion);
 
         // Alumno actual
-        Alumnos alumnoActual = values.get(position);
+        final Alumnos alumnoActual = values.get(position);
 
         // Cambio los valores de los componentes visuales con la información del alumno actual
         nombreAlumno.setText(alumnoActual.getNombre());
@@ -48,24 +48,31 @@ public class AlumnoAdapter extends ArrayAdapter<Alumnos> {
         imagenSiesta.setImageLevel(alumnoActual.getSiestaManana());
         imagenDeposicion.setImageLevel(alumnoActual.getDepositadoManana());
 
+        // Eventos click sobre los ImageView de comida, siesta y deposición
         imagenComida.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context, "Comida", Toast.LENGTH_LONG).show();
+                Toast.makeText(context, "Comida "+alumnoActual.getNombre(), Toast.LENGTH_LONG).show();
+                int nuevoLevel = (imagenComida.getDrawable().getLevel()+1)%4;
+                imagenComida.setImageLevel(nuevoLevel);
             }
         });
 
         imagenSiesta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context,"Siesta",Toast.LENGTH_LONG).show();
+                Toast.makeText(context,"Siesta "+alumnoActual.getNombre(),Toast.LENGTH_LONG).show();
+                int nuevoLevel = (imagenSiesta.getDrawable().getLevel()+1)%4;
+                imagenSiesta.setImageLevel(nuevoLevel);
             }
         });
 
         imagenDeposicion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context,"Deposición",Toast.LENGTH_LONG).show();
+                Toast.makeText(context,"Deposición "+alumnoActual.getNombre(),Toast.LENGTH_LONG).show();
+                int nuevoLevel = (imagenDeposicion.getDrawable().getLevel()+1)%4;
+                imagenDeposicion.setImageLevel(nuevoLevel);
             }
         });
 
