@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.miguelcr.scrollactivity.ScrollingActivity"
+    tools:showIn="@layout/activity_scrolling">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_alignParentTop="true"
+            android:id="@+id/infoRestaurante"
+            android:text="Teléfono: 954 11 22 33"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tituloComentarios"
+            android:text="Comentarios"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/infoRestaurante"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+<fragment
+    android:id="@+id/fragmento"
+    android:layout_marginTop="15dp"
+    android:layout_below="@+id/tituloComentarios"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:name="com.miguelcr.scrollactivity.ComentarioFragment" />
+
+    </RelativeLayout>
+
+</android.support.v4.widget.NestedScrollView>

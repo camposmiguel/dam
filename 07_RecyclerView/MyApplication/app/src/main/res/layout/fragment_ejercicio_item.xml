@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="1dp"
+    android:layout_marginTop="@dimen/activity_vertical_margin">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/activity_horizontal_margin">
+
+    <ImageView
+        android:id="@+id/imageViewIconoEjercicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_running"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/textViewTituloEjercicio"
+            android:layout_toRightOf="@+id/imageViewIconoEjercicio"
+            android:layout_alignTop="@+id/imageViewIconoEjercicio"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:text="Carrera 5Km"/>
+
+        <TextView
+            android:padding="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/textViewDuracionEjercicio"
+            android:layout_below="@+id/textViewTituloEjercicio"
+            android:layout_alignLeft="@+id/textViewTituloEjercicio"
+            android:textColor="@android:color/white"
+            android:background="@drawable/bg_rounded_color"
+            android:text="20 min"/>
+
+        <TextView
+            android:padding="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/textViewDistanciaEjercicio"
+            android:layout_toRightOf="@+id/textViewDuracionEjercicio"
+            android:textColor="@android:color/white"
+            android:background="@drawable/bg_rounded_color_accent"
+            android:layout_alignTop="@+id/textViewDuracionEjercicio"
+            android:text="5Km"/>
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
