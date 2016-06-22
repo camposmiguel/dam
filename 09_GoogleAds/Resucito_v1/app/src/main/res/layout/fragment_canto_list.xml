@@ -3,14 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/list"
-    android:name="com.miguelcr.scrollactivity.ComentarioFragment"
+    android:name="com.miguelcr.resucito.fragments.Fragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginLeft="16dp"
     android:layout_marginRight="16dp"
-    android:scrollbars="none"
-    android:scrollbarStyle="outsideOverlay"
-    android:padding="16dp"
     app:layoutManager="LinearLayoutManager"
-    tools:context="com.miguelcr.scrollactivity.ComentarioFragment"
-    tools:listitem="@layout/fragment_comentario" />
+    tools:context=".fragments.CantosFragment"
+    tools:listitem="@layout/fragment_canto" />
